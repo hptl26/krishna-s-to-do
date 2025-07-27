@@ -1,0 +1,187 @@
+/* style.css */
+
+/* Import a nice font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* --- NEW BLUE GRADIENT (Option 2) --- */
+    background: linear-gradient(135deg, #2C3E50, #0A2342); /* Dark slate blue to very dark blue */
+    /* --------------------------------- */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* ... rest of your CSS code remains the same ... */
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 3.5em; /* Slightly larger heading */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+    letter-spacing: 2px;
+}
+
+/* Container for input and button to keep them together */
+.input-section {
+    display: flex;
+    gap: 15px; /* Space between input and button */
+    margin-bottom: 30px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+input[type="text"], /* Target the input specifically */
+input:not([type]) { /* Also target generic input if type isn't specified (like in your HTML) */
+    padding: 14px 20px;
+    border: none;
+    border-radius: 30px; /* More rounded */
+    width: 350px;
+    max-width: 85%; /* Responsive width */
+    font-size: 1.15em;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
+    background-color: rgba(255, 255, 255, 0.95); /* Nearly opaque white */
+    color: #333;
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px); /* More pronounced lift */
+    border: 2px solid #D65DB1; /* Highlight border on focus */
+}
+
+button {
+    background-color: #00C9A7; /* A refreshing teal */
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.15em;
+    font-weight: 600;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    outline: none;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background-color: #00B195;
+    transform: translateY(-3px); /* Lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 450px; /* Slightly wider list */
+    max-width: 95%; /* Responsive width */
+    background-color: rgba(255, 255, 255, 0.98); /* Almost opaque white */
+    border-radius: 15px; /* More rounded corners for the list container */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); /* Stronger shadow */
+    overflow: hidden;
+    padding-bottom: 10px; /* Padding for the bottom of the ul */
+}
+
+li {
+    background-color: #ffffff;
+    padding: 18px 25px; /* More padding */
+    margin: 8px 15px; /* Margin for individual list items for a "floating" effect */
+    border-radius: 10px; /* Rounded corners for list items */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Shadow for individual items */
+    transition: all 0.3s ease-in-out;
+}
+
+li:hover {
+    background-color: #f8f8f8;
+    transform: scale(1.02); /* Slight scale on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.delete {
+    background-color: #FF6F61; /* A warm red for delete button */
+    color: white;
+    padding: 8px 18px; /* Adjusted padding */
+    font-size: 0.9em;
+    border-radius: 25px; /* More rounded delete button */
+    box-shadow: none; /* No extra shadow on delete button */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 15px; /* Space from the text */
+}
+
+.delete:hover {
+    background-color: #E0564D;
+    transform: translateY(-1px);
+}
+
+.delete:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .input-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    input[type="text"],
+    input:not([type]) {
+        width: 90%;
+        margin-right: 0;
+    }
+
+    button {
+        width: 90%;
+        padding: 12px 20px;
+    }
+
+    ul {
+        width: 95%;
+    }
+
+    li {
+        flex-direction: column; /* Stack text and delete button on small screens */
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .delete {
+        margin-top: 10px; /* Space between text and delete button */
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ... rest of your CSS code remains the same ... */
