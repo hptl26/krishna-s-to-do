@@ -3,21 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishna's To Do</title> <link rel="stylesheet" href="style.css">
-    
+    <title>Krishna To Do</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Todo App</h1>
-    <div class="input-section"> <input placeholder="enter your task" />
-        <button>Add Task</button>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-list-check sidebar-icon"></i>
+                <h2>Activities</h2>
+            </div>
+            <ul class="activity-list">
+                <li><i class="fas fa-bed sidebar-icon"></i> Make Bed</li>
+                <li><i class="fas fa-soap sidebar-icon"></i> Laundry</li>
+                <li><i class="fas fa-dumbbell sidebar-icon"></i> Workout</li>
+                <li><i class="fas fa-hand-holding-heart sidebar-icon"></i> Meditation</li>
+                <li><i class="fas fa-book-reader sidebar-icon"></i> Study</li>
+                </ul>
+        </aside>
+
+        <main class="main-content">
+            <h1>Todo App</h1>
+            <div class="input-section">
+                <input type="text" placeholder="enter your task" />
+                <button>Add Task</button>
+            </div>
+            <ul id="task-list">
+                <li>Eat <button class="delete">Delete</button></li>
+                <li>Sleep <button class="delete">Delete</button></li>
+            </ul>
+        </main>
     </div>
-    <ul>
-        <li>Eat <button class="delete">delete</button></li>
-        <li>Sleep <button class="delete">delete</button></li>
-        
-    </ul>
+
+    <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
 </html>
 <!-- <!DOCTYPE html>
 <html lang="en">
